@@ -1,0 +1,29 @@
+ <div id="motiontheater"></div>
+ <script type="text/javascript">  
+ 
+ function embedMotionTheatre()
+ {
+ 	var flashvars = {};
+    params = {
+        menu: 'false',
+        allowfullscreen: 'true',
+        quality: 'high',
+        scale: 'showAll',
+        salign: 'tl',
+        bgcolor: '#000000',
+        wmode: 'transparent',
+        allowscriptaccess: 'always'
+    };
+    var attributes = { id:'motiontheater' };
+	var expressInstall = "https://thismoment-a.akamaihd.net/theaters/dec_lib/expressInstall.swf";
+	
+	
+    if(typeof swfobject === 'undefined') {
+        return;
+    }
+
+    swfobject.embedSWF("motiontheatre.swf", "motiontheater", '970', '750', "10.1.0", expressInstall, flashvars, params, attributes);
+    
+}
+embedMotionTheatre();
+</script>
